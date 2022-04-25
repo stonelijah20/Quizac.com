@@ -1,0 +1,22 @@
+.footer-color {
+    background-color: #132a35;
+}
+.image-size {
+    width: 150px;
+    height: 40px
+}
+li {
+    list-style-type: none;
+}
+.footer li:hover {
+    cursor: pointer;
+}
+.lines li:hover {
+    cursor: pointer;
+}
+.socials li{
+    padding: 10px
+}
+.footer {
+    background-color: #0d1f25;
+}

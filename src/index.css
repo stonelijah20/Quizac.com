@@ -1,0 +1,172 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.footer-footer {
+    background-color: #0d1f25;
+}
+.header-container {
+    min-height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+.header-bg {
+    width: 100%;
+    height: 100%;
+    background-color: #0d1f25;
+}
+.borderr {
+    border-radius: 30px
+}
+.img-overlay {
+    background-image: url('./Assests/Images/Home/pattern_bg/pattern-view.png');
+}
+.design {
+    position: absolute;
+    top: 75%;
+    left: 0%;
+}
+.detailvid-container {
+    background-image: url('./Assests/Images/Home/pattern_bg/pattern-view.png');
+    /* min-height: 600px */
+}
+.sliders {
+    background-image: url('./Assests/Images/Home/Carousel/pattern-view-5.png');
+    background-repeat: no-repeat;
+    min-height: 600px;
+}
+.video {
+    height: 480px;
+    width: 940px;
+}
+.gaminginfo-container {
+    position: relative;
+}
+.gaminginfo-container-image {
+    position: absolute;
+    top: -40%;
+    left: 5%
+}
+.gaminginfo-container-counts {
+    position: absolute;
+    right:0%
+}
+.slider-section h1{
+    color: #0d1f25;
+}
+.progress {
+    width: 10%
+}
+
+@layer base {
+    li {
+        @apply px-4 capitalize text-slate-500 text-base font-semibold hover:text-slate-400 duration-1000
+    }
+    .footer-contact {
+        @apply py-1 hover:text-orange-600
+    }
+    .footer-footer {
+        @apply text-slate-500 text-center h-12 pt-2.5 capitalize
+    }
+    .footer-icons {
+        @apply py-1 hover:text-orange-600 hover:scale-150
+    }
+    .img-overlay {
+        @apply bg-repeat-x h-full w-full
+    }
+    .contents-container {
+        @apply p-20 pt-28
+    }
+    .c1 {
+        @apply flex
+    }
+    .text-content {
+        @apply text-white pt-10
+    }
+    .text-content h1 {
+        @apply font-semibold text-6xl capitalize pb-10
+    }
+    .text-content h3 {
+        @apply pb-6
+    }
+    .btn-container {
+        @apply mb-20
+    }
+    .btn {
+        @apply p-4 px-8
+    }
+    .detailvid-container {
+        @apply bg-white min-h-full p-11
+    }
+    .detail-text {
+        @apply text-4xl font-semibold text-center mt-20
+    }
+    .detail-video {
+        @apply p-9 flex justify-center
+    }
+    .gaminginfo-container {
+        @apply h-80 bg-slate-100 mb-40 flex 
+    }
+    .img-edit {
+        @apply max-w-xl
+    }
+    .gamingcnt h1{
+        @apply text-sm text-slate-600
+    }
+    .gamingcnt p{
+        @apply font-bold text-4xl
+    }.s-section h1 {
+        @apply font-semibold text-4xl w-3/4 pl-20 pb-5
+    }
+    .line {
+        @apply w-60 h-2 rounded-r bg-orange-600 
+    }
+    .image-routes {
+        @apply flex  justify-between pr-40 pl-40 my-12
+    }
+    .image-routes img {
+        @apply w-28 h-28 cursor-pointer
+    }
+    .slider-container {
+        @apply flex
+    }
+    .indicator-container h2{
+        @apply text-orange-600 font-semibold text-2xl flex justify-center capitalize
+    }
+    .indicator-container{
+        @apply flex flex-col justify-center
+    }
+    .indicator {
+        @apply bg-slate-300 w-40 h-40 grid content-center self-center justify-center rounded-full
+    }
+    .sliders {
+        @apply flex mt-14
+    }
+    .sliders h1{
+        @apply p-0
+    }
+    .sliders-text-section {
+        @apply w-1/2 pt-10 pl-20
+    }
+    .sliders-text-section p{
+        @apply text-sm pb-10
+    }
+    .sliders-text-section h1{
+        @apply text-5xl font-semibold text-orange-600 pb-10
+    }
+    .link {
+        @apply flex pb-8 
+    }
+    .link li{
+        @apply font-normal hover:text-slate-600 cursor-text self-center
+    }
+    .progress-bar-container {
+        @apply flex justify-center
+    }
+    .progress-bar {
+        @apply bg-slate-200 w-4/5 h-2 rounded-full
+    }
+    .progress {
+        @apply bg-orange-600 rounded-full h-2 duration-5000 ease-linear
+    }
+}
