@@ -11,8 +11,9 @@ function Slider() {
       let slide1 = document.querySelector('.slide1')
       let slide2 = document.querySelector('.slide2')
       let slide3 = document.querySelector('.slide3')
-      const progressIncrements = (num:any) => {
+      const progressIncrements = (num:any,i:any) => {
         if(num < 100){
+            console.log(num)
             num = num + 1
             setTimeout(() => {
                 let numStr = num.toLocaleString('en-US')
@@ -32,10 +33,25 @@ function Slider() {
                     slide2?.classList.add('hidden')
                     slide1?.classList.add('hidden')
                 }
-                progressIncrements(num)
+                progressIncrements(num,i)
             }, 500);
+        }else if(num > 90 && num < 190 && i <= 190){
+            num += 1
+            i += 1
+            i += 1
+            let a = num - i
+            setTimeout(() => {
+                /* console.log(num)
+                console.log(i) */
+                console.log(`T-------->: ${a}`)
+                progressIncrements(num,i)
+            }, 500);
+        }else if(num === 190){
+            num = 0
+            i = 0
+            progressIncrements(num,i)
         }
-        if(num === 100){
+        /* if(num === 100){
             num = num - 100
             setTimeout(() => {
                 let numStr = num.toLocaleString('en-US')
@@ -44,11 +60,11 @@ function Slider() {
                 }
                 progressIncrements(num)
             }, 500);
-        }
+        } */
 
     }
 
-    progressIncrements(0)
+    progressIncrements(0,10)
 // ------------------END--------------------------------------------------
 
 
@@ -103,7 +119,7 @@ function Slider() {
 
 
                 <div className='slider-container'>
-                    <div className='slide1 hidden'>
+                    <div className='slide1'>
                         <Sliders title={sliders.header1} info={sliders.info1} alt="image" 
                         img={sliders.img1} one={learnerList[1]} two={learnerList[2]} three={learnerList[3]}/>
                     </div>
