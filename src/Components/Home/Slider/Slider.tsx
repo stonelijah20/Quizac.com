@@ -8,12 +8,12 @@ function Slider() {
 
 // ----------------------------------FOR THE CAROUSEL----------------------
       let progress = document.getElementsByClassName('progress') as HTMLCollectionOf<HTMLElement>
+      let indicator = document.querySelectorAll('.indicator')
       let slide1 = document.querySelector('.slide1')
       let slide2 = document.querySelector('.slide2')
       let slide3 = document.querySelector('.slide3')
       const progressIncrements = (num:any,i:any) => {
         if(num < 100){
-            console.log(num)
             num = num + 1
             setTimeout(() => {
                 let numStr = num.toLocaleString('en-US')
@@ -35,36 +35,40 @@ function Slider() {
                 }
                 progressIncrements(num,i)
             }, 500);
-        }else if(num > 90 && num < 190 && i <= 190){
+        }else if(num > 99 && num < 199 && i <= 199){
             num += 1
             i += 1
             i += 1
             let a = num - i
             setTimeout(() => {
-                /* console.log(num)
-                console.log(i) */
-                console.log(`T-------->: ${a}`)
+                let numStr = a.toLocaleString('en-US')
+                 for (let i = 0; i < progress.length; i++){
+                    progress[i].style.width = `${numStr}%`
+                }
+                if(a < 40){
+                    slide1?.classList.remove('hidden')
+                    slide2?.classList.add('hidden')
+                    slide3?.classList.add('hidden')
+                }else if(a > 40 && a <80){
+                    slide1?.classList.add('hidden')
+                    slide2?.classList.remove('hidden')
+                    slide3?.classList.add('hidden')
+                }else if(a > 80){
+                    slide3?.classList.remove('hidden')
+                    slide2?.classList.add('hidden')
+                    slide1?.classList.add('hidden')
+                }
                 progressIncrements(num,i)
             }, 500);
-        }else if(num === 190){
+        }else if(num === 199){
             num = 0
             i = 0
             progressIncrements(num,i)
         }
-        /* if(num === 100){
-            num = num - 100
-            setTimeout(() => {
-                let numStr = num.toLocaleString('en-US')
-                 for (let i = 0; i < progress.length; i++){
-                    progress[i].style.width = `${numStr}%`
-                }
-                progressIncrements(num)
-            }, 500);
-        } */
 
     }
 
-    progressIncrements(0,10)
+    progressIncrements(0,1)
 // ------------------END--------------------------------------------------
 
 
