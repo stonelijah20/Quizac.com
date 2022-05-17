@@ -12,11 +12,23 @@ li {
     cursor: pointer;
 }
 .lines li:hover {
-    cursor: pointer;
+    cursor: pointer; 
 }
 .socials li{
     padding: 10px
 }
 .footer {
     background-color: #0d1f25;
+}
+.about, .info, .lines li {
+    color: white;
+}
+@media screen and (max-width: 1150px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+    .about, .info, .lines {
+        padding: 0%;
+    }
 }

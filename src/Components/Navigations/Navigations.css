@@ -5,3 +5,33 @@
     width: 150px;
     height: 40px
 }
+.menu-btn {
+    display: none;
+}
+
+@media screen and (max-width: 1150px) {
+    .navi {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: flex-start;
+    }
+    .items-container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        margin-top: 15px;
+        align-items: flex-start;
+    }
+    .menu-btn {
+        display: block;
+    }
+    li{
+        padding: 10px;
+    }
+    .user-acc {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+}
